@@ -1,8 +1,11 @@
 
-export default function ({}) {
+export default function Footer () {
+    const tahun = new Date().getFullYear();
+    
     return (
-        <div className="w-full flex-1 gap-5 bg-blue-800 py-6 text-sm text-center text-white"> 
-        @goldie keren abies
-        </div>
+       <footer className="mt-auto bg-utama p-6 text-center text-latar ">
+        <p>&copy; {tahun} Goldie Gladwin Rajaborn Arivianto. Dibuat dengan Next.js di kelas 
+            industri ubig</p>
+       </footer>
     );
 }
