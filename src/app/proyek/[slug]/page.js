@@ -26,12 +26,17 @@ export default async function DetailProyek({ params }) {
   }
 
   return (
-    <main className="mx-auto max-w-3xl px-4 py-10">
-      <Link href="/proyek" className="text-sm font-semibold text-aksen hover:underline">
+    <main className="mx-auto w-full max-w-3xl px-4 py-10">
+      <Link
+        href="/proyek"
+        className="text-sm font-semibold text-aksen dark:text-red-300 hover:underline"
+      >
         &larr; Kembali ke daftar proyek
       </Link>
-      <h1 className="mt-4 text-3xl font-bold text-utama md:text-4xl">{item.judul}</h1>
-      <p className="mt-2 text-gray-600">
+      <h1 className="mt-4 text-3xl font-bold text-utama dark:text-sky-200 md:text-4xl">
+        {item.judul}
+      </h1>
+      <p className="mt-2 text-gray-600 dark:text-gray-400">
         {item.kategori} &middot; dibuat di {item.minggu || "Kelas Industri"}
       </p>
       <Image
@@ -40,11 +45,15 @@ export default async function DetailProyek({ params }) {
         width={640}
         height={420}
         loading="eager"
-        className="mt-6 h-auto w-full rounded-xl border border-gray-200"
+        className="mt-6 h-auto w-full rounded-xl border border-gray-200 dark:border-gray-700"
       />
-      <p className="mt-6 text-lg">{item.deskripsi}</p>
-      <h2 className="mt-8 text-2xl font-bold text-utama">Yang saya pelajari</h2>
-      <ul className="mt-3 list-disc pl-5">
+      <p className="mt-6 text-lg text-gray-700 dark:text-gray-300">
+        {item.deskripsi}
+      </p>
+      <h2 className="mt-8 text-2xl font-bold text-utama dark:text-sky-200">
+        Yang saya pelajari
+      </h2>
+      <ul className="mt-3 list-disc pl-5 text-gray-700 dark:text-gray-300">
         {item.fitur.map((f) => (
           <li key={f}>{f}</li>
         ))}

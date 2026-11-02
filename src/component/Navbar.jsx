@@ -1,8 +1,8 @@
 "use client";
-import Link from "next/link";
-import { proyek } from "@/data/proyek";
-import { usePathname } from "next/navigation";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import TombolTema from "@/component/TombolTema";
 
 const menu = [
   { href: "/", label: "Beranda" },
@@ -11,11 +11,8 @@ const menu = [
   { href: "/kontak", label: "Kontak" },
 ];
 
-
-
 export default function Navbar() {
-const pathname = usePathname ();
-  
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 bg-utama text-white shadow-md">
@@ -26,23 +23,25 @@ const pathname = usePathname ();
         >
           Goldie Gladwin
         </Link>
-        <ul className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium">
-                {menu.map ((item) => {
-                  let kelas ="text-gray-200 hover:text-white";
-                  if (pathname === item.href) {
-                    kelas = "font-bold text-white underline underline-offset-8";
-                  }
-                  return (
-            <li key={item.href}>
-              <Link href={item.href} className={kelas}>
-              {item.label}
-              </Link>
-            </li>
-          )
-  })}
-        </ul>
+        <div className="flex flex-wrap items-center gap-4">
+          <ul className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium">
+            {menu.map((item) => {
+              let kelas = "text-gray-200 hover:text-white";
+              if (pathname === item.href) {
+                kelas = "font-bold text-white underline underline-offset-8";
+              }
+              return (
+                <li key={item.href}>
+                  <Link href={item.href} className={kelas}>
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+          <TombolTema />
+        </div>
       </nav>
     </header>
   );
 }
-

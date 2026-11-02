@@ -1,18 +1,21 @@
-import {proyek} from "@/data/proyek"
-import ProyekCard from "@/component/ProyekCard"
+import FilterProyek from "@/component/FilterProyek";
+import { proyek } from "@/data/proyek";
 
-export default function Tentang () {
-    return (
-        <main className="mx-auto max-w-5xl px-4 py-19">
-            <h1 className="text-3xl text-utama font-bold md:text-4xl">
-                proyek saya
-                 <p className="mt-3 text-lg text-gray-700"> kumpulan hasil belajar saya di kelas industri UBIG. KLik kartu untuk melihat detailnya </p>
-                 <div className="mt-8 grid gap-6 md:grid-cols-3">
-                    {proyek.map((item) => (
-                        <ProyekCard key={item.slug} proyek={item}/>
-                    ))}
-                 </div>
-            </h1>
-        </main>
-    )
+export const metadata = {
+  title: "Proyek",
+  description: "Daftar proyek HTML, CSS, dan JavaScript karya Goldie Gladwin.",
+};
+
+export default function DaftarProyek() {
+  return (
+    <main className="mx-auto w-full max-w-5xl px-4 py-10">
+      <h1 className="text-3xl font-bold text-utama dark:text-sky-200 md:text-4xl">
+        Proyek Saya
+      </h1>
+      <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">
+        Kumpulan hasil belajar saya di Kelas Industri UBIG. Klik kartu untuk melihat detailnya.
+      </p>
+      <FilterProyek proyek={proyek} />
+    </main>
+  );
 }

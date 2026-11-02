@@ -1,16 +1,23 @@
-import AboutCard from "@/component/AboutCard"
-import Hobi from "@/component/hobi"
-import JadwalBelajar from "@/component/JadwalBelajar"
+import AboutCard from "@/component/AboutCard";
+import Hobi from "@/component/hobi";
+import JadwalBelajar from "@/component/JadwalBelajar";
 
-export default function Tentang () {
-    return (
-        <main className="mx-auto max-w-5xl px-4 py-19">
-            <h1 className="Font-bold justify-between"></h1>
-            <div className="gap-6 space-y-5">
-            <AboutCard/>
-            <Hobi/>
-            <JadwalBelajar/>
-            </div>
-        </main>
-    )
+export const metadata = {
+  title: "Tentang",
+  description: "Tentang Goldie Gladwin, hobi, cita-cita, dan jadwal belajar.",
+};
+
+export default function Tentang() {
+  return (
+    <main className="mx-auto w-full max-w-5xl px-4 py-10">
+      <h1 className="mb-6 text-3xl font-bold text-utama dark:text-sky-200 md:text-4xl">
+        Tentang Saya
+      </h1>
+      <div className="space-y-6">
+        <AboutCard />
+        <Hobi />
+        <JadwalBelajar />
+      </div>
+    </main>
+  );
 }

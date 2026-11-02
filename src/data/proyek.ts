@@ -1,38 +1,40 @@
 export const proyek = [
-    {
-        slug: "management-siswa",
-        judul: "management siswa",
-        kategori: "NEXT.JS, tailwindcss,supabase,shadcn",
-        gambar: "/proyek/management-siswa.png",
-        deskripsi: "Project management siswa dngn menggunakan nextjs tailwindcss shadcn ui dan juga supabase",
-        fitur: [
-            "untuk memanage siswa di sekolah",
-            "untuk melihat data siswa dan kelas"
-        ],
-
- },
-    {
-        slug: "management-magang",
-        judul: "management magang",
-        kategori: "NEXT.JS, tailwindcss,supabase,shadcn",
-        gambar: "/proyek/management-magang.png",
-        deskripsi: "Project management magang dngn menggunakan nextjs tailwindcss shadcn ui dan juga supabase",
-        fitur: [
-            "untuk memanage siswa pkl",
-            "untuk melihat data siswa, guru dan dudi",
-            "untuk melakukan proses menerimaan magang pkl"
-        ],
-    },
-    {
-        slug: "portofolio",
-        judul: "portofolio",
-        kategori: "NEXT.JS, tailwindcss,supabase,shadcn",
-        gambar: "/proyek/Portofolio.png",
-        deskripsi: "Project portofolio saya dengan menggunakan teknologi nextjs tailwindcss dan shadcn ui serta menggunakan backend supabase",
-        fitur: [
-            "mendeskripsikan saya seperti apa",
-            "memperlihatkan hasil karya karya saya",
-            "memperlihatkan tujuan saya kedepan"
-        ],
-    }
+  {
+    slug: "management-siswa",
+    judul: "Management Siswa",
+    kategori: "Next.js, Tailwind CSS, Supabase, Shadcn",
+    minggu: "Kelas Industri",
+    gambar: "/proyek/management-siswa.png",
+    deskripsi: "Project management siswa dengan menggunakan Next.js, Tailwind CSS, Shadcn UI, dan juga Supabase.",
+    fitur: [
+      "Untuk memanage siswa di sekolah",
+      "Untuk melihat data siswa dan kelas"
+    ]
+  },
+  {
+    slug: "management-magang",
+    judul: "Management Magang",
+    kategori: "Next.js, Tailwind CSS, Supabase, Shadcn",
+    minggu: "Kelas Industri",
+    gambar: "/proyek/management-magang.png",
+    deskripsi: "Project management magang dengan menggunakan Next.js, Tailwind CSS, Shadcn UI, dan juga Supabase.",
+    fitur: [
+      "Untuk memanage siswa PKL",
+      "Untuk melihat data siswa, guru, dan DUDI",
+      "Untuk melakukan proses penerimaan magang PKL"
+    ]
+  },
+  {
+    slug: "portofolio",
+    judul: "Portofolio",
+    kategori: "Next.js, Tailwind CSS, Supabase, Shadcn",
+    minggu: "Kelas Industri",
+    gambar: "/proyek/portofolio.png",
+    deskripsi: "Project portofolio saya dengan menggunakan teknologi Next.js, Tailwind CSS, Shadcn UI, serta backend Supabase.",
+    fitur: [
+      "Mendeskripsikan profil saya",
+      "Memperlihatkan hasil karya-karya saya",
+      "Memperlihatkan tujuan saya ke depan"
+    ]
+  }
 ];
